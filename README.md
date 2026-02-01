@@ -24,6 +24,9 @@ Currently, the system can identify apples, bananas, potatoes, eggs, bread, and c
 
 <img width="352" height="279" alt="image" src="https://github.com/user-attachments/assets/0c7cd9c7-e549-42f3-ad60-161d30fac999" />
 
+<img width="332" height="514" alt="Screenshot 2026-02-01 at 5 48 10 PM" src="https://github.com/user-attachments/assets/1a435a91-8b4a-4719-9eca-65b5d97be8fb" />
+
+
 To record the different objects in the frame, the space bar is pressed by the user. This adds the scanned food object to a running list of scanned or “seen” foods. The calories and other nutritional information are retrieved for each food item and tallied up for the final nutritional value. Those values are overlaid on the ArUco marker on a nutritional facts label, along with the list of scanned foods. To clear out the selected foods, press "G".
 
 ## Conclusion
