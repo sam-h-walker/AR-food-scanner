@@ -9,22 +9,22 @@ For each breakfast food option that the system can detect, a pre-made open-sourc
 
 Based on what food item is scanned, the nutrition facts are retrieved from a set of predefined arrays in the Python code. By pressing the space bar on the computer’s keyboard that the system is running on, the scanned object’s label is recorded and compared with an array of the trained food items. When a match is found, the array element number is used to retrieve the nutrition information of the food from each nutrient’s array. If there are multiple food items scanned, the nutrition information will be tallied up to display a final result of the combined calories and nutrition facts on the AR overlay. The user can reset the final output and food count as well.
 
-<img src="src/assets/what-can-it-do.png" width="65%">
+<img src="src/assets/what-can-scanwich-do.png" width="65%">
 
 <img src="src/assets/system-setup.png" width="65%">
 
 The camera detects ArUco markers using the ArUco library. An ArUco marker has a black border and a distinct matrix of black and white pixels. This implementation uses the 5x5 marker, specifically marker ID #25, but Scanwich can detect any 5x5 ArUco marker. Using OpenCV and ArUco’s built-in functions, we can determine the coordinates of the ArUco marker’s corners. These corners become the destination points for the AR overlay canvas. An image is created to overlay on the ArUco marker, called the “canvas”. The canvas consists of the Scanwich logo and a blank nutrition facts label. Text is written onto the nutrition facts label according to the “seen” foods. 
 
-<img src="src/assets/AR-overlay" width="65%">
+<img src="src/assets/AR-overlay.png" width="65%">
 
 
 ## Results
 Currently, the system can identify apples, bananas, potatoes, eggs, bread, and cereal. When the application opens, the camera launches, and the webcam’s footage is displayed on the computer monitor. Visually, when an object is identified, a bounding box appears around the object with the name of the identified object above the box along with a confidence score indicating how confident the trained model is in identifying the object. In the code, there is a different trained model for each identifiable object, and the program switches between each included model to check if the webcam video has detected any of the trained food in the frame. A threshold is placed on the confidence score of each food item to avoid a food item being wrongly detected to be another food item with lower confidence. The lower the threshold, the easier it is to detect an object; the higher the threshold, the harder it is to register a detection.
 
-<img src="src/assets/object-identification-example" width="100%">
+<img src="src/assets/object-identification-example.png" width="100%">
 
 
-<img src="src/assets/nutrition-label-example" width="80%">
+<img src="src/assets/nutrition-label-example.png" width="80%">
 
 
 
