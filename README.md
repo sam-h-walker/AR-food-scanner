@@ -9,11 +9,9 @@ For each breakfast food option that the system can detect, a pre-made open-sourc
 
 Based on what food item is scanned, the nutrition facts are retrieved from a set of predefined arrays in the Python code. By pressing the space bar on the computer’s keyboard that the system is running on, the scanned object’s label is recorded and compared with an array of the trained food items. When a match is found, the array element number is used to retrieve the nutrition information of the food from each nutrient’s array. If there are multiple food items scanned, the nutrition information will be tallied up to display a final result of the combined calories and nutrition facts on the AR overlay. The user can reset the final output and food count as well.
 
-<img width="1153" height="645" width = "50%" alt="Screenshot 2026-02-01 at 5 45 38 PM" src="https://github.com/user-attachments/assets/614a24d3-7d6b-411f-8014-e178476e7846" />
+<img src="https://github.com/sam-h-walker/AR-food-scanner/blob/main/src/assets/AR-overlay.png" width="50%">
 
 <img width="1153" height="650" width = "50%" alt="Screenshot 2026-02-01 at 5 46 19 PM" src="https://github.com/user-attachments/assets/6090d719-3b71-4ced-8f93-0b333c516024" />
-
-
 
 The camera detects ArUco markers using the ArUco library. An ArUco marker has a black border and a distinct matrix of black and white pixels. This implementation uses the 5x5 marker, specifically marker ID #25, but Scanwich can detect any 5x5 ArUco marker. Using OpenCV and ArUco’s built-in functions, we can determine the coordinates of the ArUco marker’s corners. These corners become the destination points for the AR overlay canvas. An image is created to overlay on the ArUco marker, called the “canvas”. The canvas consists of the Scanwich logo and a blank nutrition facts label. Text is written onto the nutrition facts label according to the “seen” foods. 
 
